@@ -22,12 +22,32 @@ void pseudokod()
 
     //+  gör en text som ber användaren skriva in en strängtext
     //+  gör en readline med en strängvariabel som läser in strängtexten
-    //+  spara strängtextvariabeln i en array som jag kan använda till loopen för varje iteration
-    //+  skriv ett programm med villkor som går igenom och fångar upp de gemensamma nämnarna
-    //+  gör en loop för varje iteration av genomsökning som jobbar sig igenom strängtexten
+    //+  spara strängtextvariabeln i en array
+    //+ skapa en variabel som adderar alla tal som fångas upp i strängen
+    //+  gör en loop som går igenom strängarrayens alla index (foreach (string i in inputarray) t ex)
+    //+  skriv ett programm med villkor som går igenom och fångar upp de gemensamma nämnarna (if satser?)
     //+  gör en loop som adderar alla tal som programmet har fått fram
+    //+  gör ett villkor som fångar upp == siffror. t ex: if i == i {(fler if-satser för att utesluta bokstäver etc)}
     //+  gör ett villkor som tvingar de gemensamma nämnarna att vara minst 100-tal
+    //+  gör ett villkor som tvingar de gemensamma nämnarna att inte ha bokstäver mellan sig
+
 
 
 
 }
+
+
+Console.WriteLine("mata in en sträng");
+string inputtedstring = Console.ReadLine();
+ 
+
+for (int i = 0; i < inputtedstring.Length; i++) 
+{
+    Console.WriteLine(inputtedstring[i]);
+
+    if (i == i) 
+    {
+        Console.WriteLine("match");
+    }
+}
+
