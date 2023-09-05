@@ -171,7 +171,7 @@ try
     }
     else
     {
-        Console.WriteLine("Du e fan dum i huvudet");
+        Console.WriteLine("Verkar som att du inte skrev in en operand");
     }
 }
 catch 
