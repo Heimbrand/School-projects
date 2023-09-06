@@ -18,6 +18,8 @@ void labbinfo()
     //Total = 5836428677242
 }
 void pseudokod()
+
+
 {
 
     //+  gör en text som ber användaren skriva in en strängtext
@@ -30,4 +32,22 @@ void pseudokod()
 
 
 
+}
+
+Console.WriteLine("Skriv in en sträng");
+string inputtedstring = Console.ReadLine();
+
+//Hur gör jag om inputtedstring till en array härifrån?
+
+int[] b = new int[4] {1, 2, 6, 5 };
+
+for (int i = b.Length - 1; i > 0; i--)  
+{
+    for (int j = 0; j < b.Length; j++) 
+    {
+        if (b[i] == b[j])
+        {
+            Console.WriteLine(b);
+        }
+    }
 }
