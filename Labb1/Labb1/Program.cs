@@ -31,43 +31,10 @@ void pseudokod()
     //+  gör en loop som adderar alla tal som programmet har fått fram
     //+  gör ett villkor som fångar upp == siffror. t ex: if i == i {(fler if-satser för att utesluta bokstäver etc)}
     //+  gör ett villkor som tvingar de gemensamma nämnarna att vara minst 100-tal
-    //+  gör ett villkor som tvingar de gemensamma nämnarna att inte ha bokstäver mellan sig
 
 
-
-<<<<<<< HEAD
-}
-
-Console.WriteLine("Skriv in en sträng");
+Console.WriteLine("mata in en sträng");
 string inputtedstring = Console.ReadLine();
-
-//Hur gör jag om inputtedstring till en array härifrån?
-
-int[] b = new int[4] {1, 2, 6, 5 };
-
-for (int i = b.Length - 1; i > 0; i--)  
-{
-    for (int j = 0; j < b.Length; j++) 
-    {
-        if (b[i] == b[j])
-        {
-            Console.WriteLine(b);
-        }
-    }
-}
-
-
-
  
 
-//for (int i = 0; i < inputtedstring.Length; i++) 
-//{
-//    Console.WriteLine(inputtedstring[i]);
-
-//    if (i == i) 
-//    {
-//        Console.WriteLine("match");
-//    }
-//}
-
-//// 17daafe9f83e41e5e08a7417478ed000bcb0cdf2
+}
