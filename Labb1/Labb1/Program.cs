@@ -33,8 +33,22 @@ void pseudokod()
     //+  gör ett villkor som tvingar de gemensamma nämnarna att vara minst 100-tal
 
 
-Console.WriteLine("mata in en sträng");
-string inputtedstring = Console.ReadLine();
+
  
 
+}
+
+
+
+int[] b = new int[5] { 1, 2, 3, 4, 5 };
+
+for(int i = b.Length; i > 0; i--) 
+{
+    for(int j = 0; j < 5; j++) 
+    {
+        if (b[i] == b[j]) 
+        {
+
+        }
+    }
 }
