@@ -1,7 +1,5 @@
 ﻿
 
-using System.Globalization;
-
 void övningsuppgift1()
 {
     // Uppgift 1
@@ -12,7 +10,7 @@ void övningsuppgift1()
     Console.WriteLine("Hej, vad heter du?");
     string name = Console.ReadLine();
     Console.WriteLine("Hej, " + name + "!");
-}  
+}  //program som ber användaren skriva in ett namn, sedan returnar programmet namnet som användaren skrev
 void övningsuppgift2()
 {
     //Uppgift 2
@@ -34,7 +32,7 @@ void övningsuppgift2()
     {
         Console.WriteLine("Fel läsenord");
     }
-}
+} //skriv ett program som ber om ett lösen, om det är rätt så skrivs det, om det är fel so skrivs det med
 void övningsuppgift3()
 {
     //Uppgift 3
@@ -66,7 +64,7 @@ void övningsuppgift3()
         Console.WriteLine("Du skrev inte någon siffra:(");
 
     }
-}
+}// program som ber om ett tal. programmet skriver sedan ut om talet var > < eller == med 100
 void övningsuppgift4()
 {
     //Uppgift 4
@@ -86,7 +84,7 @@ void övningsuppgift4()
         Console.WriteLine("Hej, " + name + "!");
 
     }
-}
+} //program som skriver en hälsning, sedan skriver man ett tal och efter det skrivs samma hälsning så lika många gånger som talet man angav
 void övningsuppgift5()
 {
     //Uppgift 5
@@ -126,7 +124,7 @@ void övningsuppgift5()
             correctinput = false;
         }
     }
-}
+} // ber användaren skriva in ett tal, sedan ett till tal och så fortsätter den så. för varje tal som skrivs in adderar man alla tal. program avslutas när man inte skriver ett tal
 void övningsuppgift6()
 {
     //Uppgift 6
@@ -180,7 +178,7 @@ void övningsuppgift6()
     {
         Console.WriteLine("Du skrev inte in ett tal");
     }
-}
+} //simpel miniräknare
 void övningsuppgift7()
 {
     //Upgift 7
@@ -281,7 +279,7 @@ void övningsuppgift7()
 
         }
     }
-}
+} //ber användaren skriva in en månad, programmet returnar månades siffervärde. extra utmaning ej avklarad (användare skall kunna skriva in fler månader)
 void övningsuppgift8()
 {
     //Skapa ett program som skriver ut 1 på första raden, 2 på nästa, sedan 4, o.s.v (dubbelt så hög siffra för varje rad). 
@@ -294,7 +292,7 @@ void övningsuppgift8()
         Console.WriteLine(number);
         number = number * 2;
     }
-}
+} // programm som skriver ut 16 rader, och talet i varje rad dubblar i värde, 2,4,8,16 etc
 void övningsuppgift9()
 {
     // Skriv ett program som frågar användaren efter ett tal mellan 1 och 100. 
@@ -353,7 +351,7 @@ void övningsuppgift9()
             abrahamstaljakt = false;
         }
     }
-}
+} //gissningslek mellan 1-100
 void övningsuppgift10()
 {
     //Be användaren mata in en sträng. Skriv ut varje tecken i strängen på en egen rad. Ex:
@@ -381,7 +379,7 @@ void övningsuppgift10()
     // foreach = i detta fall går den igenom hur många chars(bokstäver) som finns i min strängvariabel och
     // lagrar den informationen i min lokala variabel "letter". skriver jag ut detta så kommer varje
     // bokstav i strängvariabeln inputtedstring att skrivas ut individuellt på en egen rad
-}
+} // ber användaren skriva in en sträng som sedan skriver ut varje bokstav på en ny rad
 void övningsuppgift11()
 {
 
@@ -416,28 +414,45 @@ void övningsuppgift11()
         }
     }
 
-}
-
-// void övningsuppgift12() {
-
-//Fråga användaren hur många tal den vill mata in. 
-//Fråga sedan efter talen i tur och ordning (“Ange tal 1:” osv). När alla tal är inmatade skriv ut dem i omvänd ordning.
-
-Console.WriteLine("Skriv in hur många siffror du vill mata in");
-int amountOfNumbers = Convert.ToInt32(Console.ReadLine());
-int[] amountOfNumbersarray = new int[amountOfNumbers];
-
-for (int i = 0; i <  amountOfNumbers; i++)
+} // array som ber användaren skriva ut en 3 siffrig kod för att sedan skriva ut den i bokstäver. t ex 484 blir "fyra - åtta - sju."
+ void övningsuppgift12()
 {
-    int currentNumber = i;
-    currentNumber++;
-    Console.WriteLine("Ange tal " + currentNumber);
-    amountOfNumbersarray[i] = Convert.ToInt32(Console.ReadLine());
 
-   
-}
-for (int j = amountOfNumbersarray.Length; j > 0; j--)
+    //Fråga användaren hur många tal den vill mata in. 
+    //Fråga sedan efter talen i tur och ordning (“Ange tal 1:” osv). När alla tal är inmatade skriv ut dem i omvänd ordning.
+
+    Console.WriteLine("Skriv in hur många siffror du vill mata in");
+    int amountOfNumbers = Convert.ToInt32(Console.ReadLine()); // int variabel som returnar vad användaren skriver
+    int[] amountOfNumbersarray = new int[amountOfNumbers];  // int array som lagrar min int variabel i sin index
+
+    for (int i = 0; i < amountOfNumbers; i++)  //for loop som loopar värdet använder ger variabeln
+    {
+        int currentNumber = i; // variabel som håller koll på vilken index som är nuvarande talet
+        currentNumber++; //counter till föregående förklaring
+        Console.WriteLine("Ange tal " + currentNumber); //writeline för vilket tal som skall anges
+        amountOfNumbersarray[i] = Convert.ToInt32(Console.ReadLine()); // läser in vad användaren skriver för tal i ordningen för loopen
+
+
+    }
+    for (int j = amountOfNumbersarray.Length - 1; j >= 0; j--) //for loop som skriver ut alla skrivna tal bakåtvänt
+    {
+
+        Console.WriteLine(amountOfNumbersarray[j]); //writeline som skriver ut vad loopen gör
+    }
+} // be användare mata in valt tal, sedan be användaren skriva en siffra per tal och skriv sedan ut alla dem tal omvänt
+// void övningsuppgift13()
 {
-   
-    Console.WriteLine(amountOfNumbersarray[j]);
-}
+
+    //Be användaren mata in en text. Skriv sedan ut texten baklänges.
+
+    Console.WriteLine("Mata in en text");
+    string greeting = Console.ReadLine();
+
+    for (int i = greeting.Length - 1; i >= 0; i--) // Loop som tar den inmatade stränges längd och deklarerar den som "i", tar sedan bort 1 tills "i" är 0aj
+    {
+
+        Console.Write(greeting[i]);
+        //greetingArray[i] = Convert.ToInt32(Console.ReadLine()); 
+
+    }
+} // program som ber användaren skriva in en text, man returnar sedan den texten baklänges
