@@ -1,4 +1,7 @@
 ﻿
+
+using System.Globalization;
+
 void övningsuppgift1()
 {
     // Uppgift 1
@@ -9,7 +12,7 @@ void övningsuppgift1()
     Console.WriteLine("Hej, vad heter du?");
     string name = Console.ReadLine();
     Console.WriteLine("Hej, " + name + "!");
-}
+}  
 void övningsuppgift2()
 {
     //Uppgift 2
@@ -60,7 +63,7 @@ void övningsuppgift3()
     }
     else
     {
-        Console.WriteLine("Du skrev inte någon siffra:("); 
+        Console.WriteLine("Du skrev inte någon siffra:(");
 
     }
 }
@@ -364,19 +367,77 @@ void övningsuppgift10()
     string inputtedstring = Console.ReadLine();
 
 
-       foreach (char letter in inputtedstring)
+    foreach (char letter in inputtedstring)
     {
         Console.WriteLine(letter);
     }
+
+
+    // char == Datatyp likt int, string, bool etc.
+    // letter == en variabel jag själv skapat lokalt i loopen. alltid samma som datatypen.
+    // in == letter blir en variabel som håller alla chars i/in "inputtedstring"
+    // inputtedstring == min egen variabel som inte är lokal, utan finns även utanför loopen som "undersöks"
+    // i loopen.
+    // foreach = i detta fall går den igenom hur många chars(bokstäver) som finns i min strängvariabel och
+    // lagrar den informationen i min lokala variabel "letter". skriver jag ut detta så kommer varje
+    // bokstav i strängvariabeln inputtedstring att skrivas ut individuellt på en egen rad
+}
+void övningsuppgift11()
+{
+
+    // Skapa ett program med en array som innehåller 
+    // strängarna “noll”, “ett”, “två”, “tre”, “fyra”, “fem”, “sex”, “sju”, “åtta”, “nio”. 
+    // Be sedan användaren att mata in en siffra. Använd arrayen för att skriva ut siffrans ord. 
+    // Ex. Inmatning “3” => “tre”.
+    // Extra utmaning: Användaren kan mata in en sträng med fritt antal siffror, om man skriver in t.ex 432 
+    // så svarar programmet: “fyra - tre - två”.
+
+
+
+    string stringinput;
+    string[] numbers = new string[10] { "noll", "ett", "två", "tre", "fyra", "fem", "sex", "sju", "åtta", "nio" };
+
+    Console.WriteLine("Skriv en siffra");
+    stringinput = Console.ReadLine();
+    Console.WriteLine(stringinput);
+
+
+    for (int i = 0; i < stringinput.Length; i++)
+    {
+        int siffra = int.Parse(stringinput[i] + ""); //gör en int.Parse och stoppar in min stringinput i () för att det är just den jag parsear till en ny int
+        Console.Write(numbers[siffra]); //skriver ut min array och inom hakparanteserna skriver jag ut min nya int variabel som jag parseade min stringinput
+        if (2 > i)
+        {
+            Console.Write(" - ");
+        }
+        else
+        {
+            Console.WriteLine(".");
+        }
+    }
+
 }
 
-övningsuppgift10();
+// void övningsuppgift12() {
 
-// char == Datatyp likt int, string, bool etc.
-// letter == en variabel jag själv skapat lokalt i loopen. alltid samma som datatypen.
-// in == letter blir en variabel som håller alla chars i/in "inputtedstring"
-// inputtedstring == min egen variabel som inte är lokal, utan finns även utanför loopen som "undersöks"
-// i loopen.
-// foreach = i detta fall går den igenom hur många chars(bokstäver) som finns i min strängvariabel och
-// lagrar den informationen i min lokala variabel "letter". skriver jag ut detta så kommer varje
-// bokstav i strängvariabeln inputtedstring att skrivas ut individuellt på en egen rad
+//Fråga användaren hur många tal den vill mata in. 
+//Fråga sedan efter talen i tur och ordning (“Ange tal 1:” osv). När alla tal är inmatade skriv ut dem i omvänd ordning.
+
+Console.WriteLine("Skriv in hur många siffror du vill mata in");
+int amountOfNumbers = Convert.ToInt32(Console.ReadLine());
+int[] amountOfNumbersarray = new int[amountOfNumbers];
+
+for (int i = 0; i <  amountOfNumbers; i++)
+{
+    int currentNumber = i;
+    currentNumber++;
+    Console.WriteLine("Ange tal " + currentNumber);
+    amountOfNumbersarray[i] = Convert.ToInt32(Console.ReadLine());
+
+   
+}
+for (int j = amountOfNumbersarray.Length; j > 0; j--)
+{
+   
+    Console.WriteLine(amountOfNumbersarray[j]);
+}
