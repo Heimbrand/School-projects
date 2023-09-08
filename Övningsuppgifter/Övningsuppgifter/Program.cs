@@ -1,5 +1,4 @@
-﻿
-void övningsuppgift1()
+﻿void övningsuppgift1()
 {
     // Uppgift 1
 
@@ -480,25 +479,63 @@ void övningsuppgift14()
         iteration++;
     }
 }  // Ber användaren mata in en sträng. Returnar den strängen med vokaler ersatte med "*" Jag använde en foreach loop, jesper använde en for loop. bra att visualisera skillnaden
-//void övningsuppgift15() { 
+
 
 //Ett palindrom är ett ord som blir samma framlänges som baklänges. 
 //Be användaren skriva in ett ord och ange sedan om det är ett palindrom eller inte.
-
+// ----------------------------------------------------------------------------------
 //1. Convert the string into an array of characters using the ToCharArray() method.
 //2. Reverse the character array using Array.Reverse method.
 //3. Create a new string from the reversed array.This will result in
 //   reversing the original string.---
+//-----------------------------------------------------------------------------------
+//char[] inputtedStringArray = inputtedString.ToCharArray();
+//Array.Reverse(inputtedStringArray);
+//Console.WriteLine(inputtedStringArray);
+//if (inputtedString + "" == inputtedStringArray + "")
+//{
+//    Console.WriteLine("Ditt tal är ett palindrom!");
+//}
+//-----------------------------------------------------------------------------------
+//int reversed;
+//int.TryParse(inputtedString, out reversed);
+//-----------------------------------------------------------------------------------
+
+// Lösning som jag inte förstår mig på
+
+//Console.WriteLine("Skriv ett ord");
+//string inputtedString = Console.ReadLine();
+//string reversedString = new string(inputtedString.ToCharArray().Reverse().ToArray()); //|| //hävdar att strängen ej är ett palindrom om ena variabeln har stora bokstäver medan den andra
+//                                                                                      // inte har det
+//if (inputtedString == reversedString)
+//{
+//    Console.WriteLine("Ditt ord är ett palindrom");
+//}
+//else
+//{
+//    Console.WriteLine("Ditt ord är inte ett palindrom");
+//}
+//------------------------------------------------------------------------------------
+
 
 Console.WriteLine("Skriv ett ord");
 string inputtedString = Console.ReadLine();
-char[] inputtedStringArray = inputtedString.ToCharArray();
-Array.Reverse(inputtedStringArray);
-Console.WriteLine(inputtedStringArray);
-if (inputtedString + "" == inputtedStringArray + "")
+string[] reversedString = new string[inputtedString.Length];
+Array.Reverse(reversedString);
+
+if (inputtedString +"" == reversedString + "")
 {
-    Console.WriteLine("Ditt tal är ett palindrom!");
+    Console.WriteLine(inputtedString);
 }
+else
+{
+    Console.WriteLine(reversedString);
+}
+
+
+
+
+
 
 
 
@@ -506,18 +543,16 @@ if (inputtedString + "" == inputtedStringArray + "")
 
 //for (int i = inputtedString.Length - 1; i >= 0; i--)
 //{
-//    Console.WriteLine(inputtedString[i]);
-//    if (inputtedString == inputtedString[i] + "")
-//    {
-//        Console.WriteLine(inputtedString + "är ett palindrom");
-//    }
-
 
 //    for (int j = 0; j < inputtedString.Length; j++)
 //    {
-//        if (inputtedString == inputtedString)
+//        if (i != j)
 //        {
-//            Console.WriteLine(inputtedString + " är ett palindrom!");
+//            Console.WriteLine("inte ett palindrom");
+//        }
+//        else
+//        {
+//            Console.WriteLine("palindrom");
 //        }
 //    }
 //}
