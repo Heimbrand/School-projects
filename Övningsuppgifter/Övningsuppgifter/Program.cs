@@ -1,5 +1,4 @@
 ﻿
-
 void övningsuppgift1()
 {
     // Uppgift 1
@@ -414,8 +413,8 @@ void övningsuppgift11()
         }
     }
 
-} // array som ber användaren skriva ut en 3 siffrig kod för att sedan skriva ut den i bokstäver. t ex 484 blir "fyra - åtta - sju."
- void övningsuppgift12()
+} // array som ber användaren skriva ut en 3 siffrig kod för att sedan skriva ut den i bokstäver. t ex 484 blir "fyra - åtta - fyra."
+void övningsuppgift12()
 {
 
     //Fråga användaren hur många tal den vill mata in. 
@@ -440,7 +439,7 @@ void övningsuppgift11()
         Console.WriteLine(amountOfNumbersarray[j]); //writeline som skriver ut vad loopen gör
     }
 } // be användare mata in valt tal, sedan be användaren skriva en siffra per tal och skriv sedan ut alla dem tal omvänt
-// void övningsuppgift13()
+void övningsuppgift13()
 {
 
     //Be användaren mata in en text. Skriv sedan ut texten baklänges.
@@ -456,3 +455,69 @@ void övningsuppgift11()
 
     }
 } // program som ber användaren skriva in en text, man returnar sedan den texten baklänges
+void övningsuppgift14()
+{
+
+    //Be användaren mata in en text. Skriv ut texten med alla vokaler ersatta med *
+    //  <**Extra utmaning: Skriv ut texten översatt till rövarspråket**>
+    // A O U Å
+    // E I Y Ä Ö
+
+    Console.WriteLine("Mata in en sträng");
+    string inputtedstring = Console.ReadLine();
+    string[] vowels = new string[9] { "a", "o", "u", "å", "e", "i", "y", "ä", "ö" };
+    int iteration = 0;
+     foreach (char letter in inputtedstring)
+    {
+        if (vowels.Contains(inputtedstring[iteration] + ""))
+        {
+            Console.WriteLine("*");
+        }
+        else
+        {
+            Console.WriteLine(inputtedstring[iteration]);
+        }
+        iteration++;
+    }
+}  // Ber användaren mata in en sträng. Returnar den strängen med vokaler ersatte med "*" Jag använde en foreach loop, jesper använde en for loop. bra att visualisera skillnaden
+//void övningsuppgift15() { 
+
+//Ett palindrom är ett ord som blir samma framlänges som baklänges. 
+//Be användaren skriva in ett ord och ange sedan om det är ett palindrom eller inte.
+
+//1. Convert the string into an array of characters using the ToCharArray() method.
+//2. Reverse the character array using Array.Reverse method.
+//3. Create a new string from the reversed array.This will result in
+//   reversing the original string.---
+
+Console.WriteLine("Skriv ett ord");
+string inputtedString = Console.ReadLine();
+char[] inputtedStringArray = inputtedString.ToCharArray();
+Array.Reverse(inputtedStringArray);
+Console.WriteLine(inputtedStringArray);
+if (inputtedString + "" == inputtedStringArray + "")
+{
+    Console.WriteLine("Ditt tal är ett palindrom!");
+}
+
+
+
+
+
+//for (int i = inputtedString.Length - 1; i >= 0; i--)
+//{
+//    Console.WriteLine(inputtedString[i]);
+//    if (inputtedString == inputtedString[i] + "")
+//    {
+//        Console.WriteLine(inputtedString + "är ett palindrom");
+//    }
+
+
+//    for (int j = 0; j < inputtedString.Length; j++)
+//    {
+//        if (inputtedString == inputtedString)
+//        {
+//            Console.WriteLine(inputtedString + " är ett palindrom!");
+//        }
+//    }
+//}
