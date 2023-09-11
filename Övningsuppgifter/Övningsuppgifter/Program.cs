@@ -527,38 +527,50 @@ void övningsuppgift15()
         Console.WriteLine("Ditt ord är inte ett palindrom");
     }
 }// program där man läser av om ett ord är ett palindrom eller ej
-//void övningsuppgift17() 
-
-//Gör ett program som ber användaren mata in en text. 
-//Be sedan användaren mata in en sträng som är en del av den första texten. 
-//Skriv ut hela texten med den del man angav markerad i en annan färg. Ex. 
-//Användare matar in “abcdefghijklmnopqrstuvxyz”, och sedan “defg”. 
-//Programmet ska då skriva ut: abcdefghijklmnopqrstuvxyz
-
-Console.WriteLine("Var god mata in en text");
-string inputtedString = Console.ReadLine();
-Console.WriteLine("Kanon, mata nu in endast en del av din text");
-string inputtedStringSequence = Console.ReadLine();
-int loopCount = 0;
-string sequence = string.Empty;
-
-for (int i = 0; i < inputtedString.Length; i++)
+ //void övningsuppgift17()
 {
-    Console.WriteLine(i);
-    if (inputtedString[i] == inputtedStringSequence[loopCount])
-    {
-        sequence += inputtedString[i];
-        loopCount++;
 
-        if (sequence == inputtedStringSequence)
-        {
-            Console.WriteLine(sequence);
-            break;
-            
-        }
+    //Gör ett program som ber användaren mata in en text. 
+    //Be sedan användaren mata in en sträng som är en del av den första texten. 
+    //Skriv ut hela texten med den del man angav markerad i en annan färg. Ex. 
+    //Användare matar in “abcdefghijklmnopqrstuvxyz”, och sedan “defg”. 
+    //Programmet ska då skriva ut: abcdefghijklmnopqrstuvxyz
+
+    Console.WriteLine("Var god mata in en text");
+    string inputtedString = Console.ReadLine();
+    Console.WriteLine("Kanon, mata nu in endast en del av din text");
+    string inputtedStringSequence = Console.ReadLine();
+    int loopCount = 0;
+    string sequence = string.Empty;
+
+    for (int i = 0; i < inputtedString.Length; i++)
+    {
         
+        if (inputtedString[i] == inputtedStringSequence[loopCount])
+        {
+            sequence += inputtedString[i];
+            loopCount++;
+           // Console.WriteLine(loopCount);
+
+            if (sequence == inputtedStringSequence)
+            {
+                Console.WriteLine("Den andra texten du skrev var: " + "'" + sequence + "'");
+                break;
+
+            }
+
+
+        }
+
 
     }
-    
-    
-}
+    for (int i = inputtedString.Length -1; i >= 0; i--)
+    {
+        for (int j = 0; i < inputtedString.Length; j++)
+        {
+            Console.WriteLine(j);
+            break;
+        }
+    }
+} //Program där man ber användaren skriva in en text, sedan bara en bit av texten. programmet skall sedan returna hela strängen fast med delen som skrev sists i annan färg
+                            // Inte riktigt klar än, har fått ut sekvensen som skrivs andra gången i en ny variabel so far.
