@@ -1,5 +1,7 @@
 ﻿
 
+using System;
+
 void labbinfo()
 {
     //Skapa en konsollapplikation som tar en textsträng (string) som argument till Main eller uppmanar användaren mata in en sträng i konsollen.
@@ -23,7 +25,7 @@ void pseudokod()
     //+  gör en text som ber användaren skriva in en strängtext
     //+  gör en readline med en strängvariabel som läser in strängtexten
     //+  spara strängtextvariabeln i en array
-    //+ skapa en variabel som adderar alla tal som fångas upp i strängen
+    //+  skapa en variabel som adderar alla tal som fångas upp i strängen
     //+  gör en loop som går igenom strängarrayens alla index (foreach (string i in inputarray) t ex)
     //+  skriv ett programm med villkor som går igenom och fångar upp de gemensamma nämnarna (if satser?)
     //+  gör en loop som adderar alla tal som programmet har fått fram
@@ -31,23 +33,85 @@ void pseudokod()
     //+  gör ett villkor som tvingar de gemensamma nämnarna att vara minst 100-tal
     //+  gör ett villkor som tvingar de gemensamma nämnarna att inte ha bokstäver mellan sig
 
+    Console.WriteLine("Var god mata in en text");
+    string inputtedString = Console.ReadLine();
+    Console.WriteLine("Kanon, mata nu in endast en del av din text");
+    string inputtedStringSequence = Console.ReadLine();
+    int loopCount = 0;
+    string sequence = string.Empty;
 
-
-
-}
-
-
-Console.WriteLine("mata in en sträng");
-string inputtedstring = Console.ReadLine();
- 
-
-for (int i = 0; i < inputtedstring.Length; i++) 
-{
-    Console.WriteLine(inputtedstring[i]);
-
-    if (i == i) 
+    for (int i = 0; i < inputtedString.Length; i++)
     {
-        Console.WriteLine("match");
+          if (inputtedString[i] == inputtedStringSequence[loopCount])
+          {
+            sequence += inputtedString[i];
+            loopCount++;
+            // Console.WriteLine(loopCount);
+
+            if (sequence == inputtedStringSequence)
+            {
+                Console.WriteLine("Den andra texten du skrev var: " + "'" + sequence + "'");
+                break;
+
+            }
+          }
     }
 }
 
+// TESTSTRÄNG 29535123p48723487597645723645
+
+Console.WriteLine("Var god mata in en text");
+Console.WriteLine("Du matade in 29535123p48723487597645723645");
+string inputtedString = "29535123p48723487597645723645";
+string[] numbers = new string[10] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+string sequence = "";
+int sequenceNum;
+
+//char[] inputtedStringArray = new char[inputtedString];
+
+for (int i =  0; i < inputtedString.Length; i++)
+{
+    //if (char.IsNumber(inputtedString[i]))
+    //{
+    //    continue;
+    //}
+
+    for (int j = i +1; j < inputtedString.Length; j++)
+    {
+        if (!char.IsDigit(inputtedString[j]))
+        {
+            break;
+        }
+        
+       if (inputtedString[i] == inputtedString[j])
+       {
+            
+            
+            sequence = inputtedString.Substring(i, j -i +1);
+            //int.TryParse(sequence, out sequenceNum);
+            //sequence = sequence += sequenceNum;
+            Console.WriteLine(sequence);
+
+
+
+        }
+
+
+        //else if (inputtedString[i] != inputtedString[j])
+        //{
+        //    sequence = sequence += inputtedString[j];
+        //}
+        //if (sequence[i] == sequence[j])
+        //{
+        //    Console.WriteLine(sequence);
+        //    continue;
+        //}
+
+
+    }
+
+
+
+}
+
+//string seguence = string.Empty;
