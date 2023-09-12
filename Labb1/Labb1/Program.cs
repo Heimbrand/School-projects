@@ -20,6 +20,8 @@ void labbinfo()
     //Total = 5836428677242
 }
 void pseudokod()
+
+
 {
 
     //+  gör en text som ber användaren skriva in en strängtext
@@ -31,7 +33,6 @@ void pseudokod()
     //+  gör en loop som adderar alla tal som programmet har fått fram
     //+  gör ett villkor som fångar upp == siffror. t ex: if i == i {(fler if-satser för att utesluta bokstäver etc)}
     //+  gör ett villkor som tvingar de gemensamma nämnarna att vara minst 100-tal
-    //+  gör ett villkor som tvingar de gemensamma nämnarna att inte ha bokstäver mellan sig
 
     Console.WriteLine("Var god mata in en text");
     string inputtedString = Console.ReadLine();
