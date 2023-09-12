@@ -1,6 +1,7 @@
 ﻿
 
 using System;
+using System.Globalization;
 
 void labbinfo()
 {
@@ -41,6 +42,7 @@ void pseudokod()
     int loopCount = 0;
     string sequence = string.Empty;
 
+
     for (int i = 0; i < inputtedString.Length; i++)
     {
           if (inputtedString[i] == inputtedStringSequence[loopCount])
@@ -64,55 +66,42 @@ void pseudokod()
 Console.WriteLine("Var god mata in en text");
 Console.WriteLine("Du matade in 29535123p48723487597645723645");
 string inputtedString = "29535123p48723487597645723645";
-string[] numbers = new string[10] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
-string sequence = "";
-int sequenceNum;
+string sequence;
+double sequenceSum = 0;
 
-//char[] inputtedStringArray = new char[inputtedString];
-
-for (int i =  0; i < inputtedString.Length; i++)
+for (int i = 0; i < inputtedString.Length; i++)
 {
-    //if (char.IsNumber(inputtedString[i]))
-    //{
-    //    continue;
-    //}
-
-    for (int j = i +1; j < inputtedString.Length; j++)
+    if (char.IsDigit(inputtedString[i]))
     {
-        if (!char.IsDigit(inputtedString[j]))
+        for (int j = i + 1; j < inputtedString.Length; j++)
         {
-            break;
-        }
-        
-       if (inputtedString[i] == inputtedString[j])
-       {
             
-            
-            sequence = inputtedString.Substring(i, j -i +1);
-            //int.TryParse(sequence, out sequenceNum);
-            //sequence = sequence += sequenceNum;
-            Console.WriteLine(sequence);
+            if (inputtedString[i] == inputtedString[j])
+            {
 
-
-
+                
+                sequence = (inputtedString.Substring(i, j - i + 1));
+               Console.WriteLine(sequence);
+                double sequenceResult;
+                double.TryParse(sequence, out sequenceResult);
+                sequenceSum += sequenceResult;
+                break;
+            }
+            else if (!char.IsDigit(inputtedString[j]))
+            {
+                break;
+            }
         }
-
-
-        //else if (inputtedString[i] != inputtedString[j])
-        //{
-        //    sequence = sequence += inputtedString[j];
-        //}
-        //if (sequence[i] == sequence[j])
-        //{
-        //    Console.WriteLine(sequence);
-        //    continue;
-        //}
-
-
     }
-
-
-
 }
+Console.WriteLine("-------------------------------------------------------");
+Console.WriteLine("Den inskrivna strängen är " + inputtedString);
+Console.WriteLine("-------------------------------------------------------");
+Console.WriteLine("den totala summan av alla delsträngar är  " + sequenceSum);
+Console.WriteLine("-------------------------------------------------------");
 
-//string seguence = string.Empty;
+
+
+
+
+
