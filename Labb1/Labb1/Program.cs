@@ -1,6 +1,7 @@
 ﻿
 
 using System;
+using System.ComponentModel.Design;
 using System.Globalization;
 
 void labbinfo()
@@ -64,8 +65,7 @@ void pseudokod()
 // TESTSTRÄNG 29535123p48723487597645723645
 
 Console.WriteLine("Var god mata in en text");
-Console.WriteLine("Du matade in 29535123p48723487597645723645");
-string inputtedString = "29535123p48723487597645723645";
+string inputtedString = Console.ReadLine();
 string sequence;
 double sequenceSum = 0;
 
@@ -73,26 +73,28 @@ for (int i = 0; i < inputtedString.Length; i++)
 {
     if (char.IsDigit(inputtedString[i]))
     {
+      
         for (int j = i + 1; j < inputtedString.Length; j++)
         {
-            
             if (inputtedString[i] == inputtedString[j])
             {
 
-                
-                sequence = (inputtedString.Substring(i, j - i + 1));
-               Console.WriteLine(sequence);
-                double sequenceResult;
-                double.TryParse(sequence, out sequenceResult);
-                sequenceSum += sequenceResult;
-                break;
+
+                    sequence = (inputtedString.Substring(i, j - i + 1));
+                    Console.WriteLine(sequence);
+                    double sequenceResult;
+                    double.TryParse(sequence, out sequenceResult);
+                    sequenceSum += sequenceResult;
+                    break;
             }
             else if (!char.IsDigit(inputtedString[j]))
             {
                 break;
             }
         }
-    }
+
+    }    
+   
 }
 Console.WriteLine("-------------------------------------------------------");
 Console.WriteLine("Den inskrivna strängen är " + inputtedString);
