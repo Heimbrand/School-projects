@@ -1,4 +1,6 @@
-﻿void övningsuppgift1()
+﻿using System.Threading.Channels;
+
+void övningsuppgift1()
 {
     // Uppgift 1
 
@@ -466,7 +468,7 @@ void övningsuppgift14()
     string inputtedstring = Console.ReadLine();
     string[] vowels = new string[9] { "a", "o", "u", "å", "e", "i", "y", "ä", "ö" };
     int iteration = 0;
-     foreach (char letter in inputtedstring)
+    foreach (char letter in inputtedstring)
     {
         if (vowels.Contains(inputtedstring[iteration] + ""))
         {
@@ -479,7 +481,6 @@ void övningsuppgift14()
         iteration++;
     }
 }  // Ber användaren mata in en sträng. Returnar den strängen med vokaler ersatte med "*" Jag använde en foreach loop, jesper använde en for loop. bra att visualisera skillnaden
-<<<<<<< Updated upstream
 void övningsuppgift15()
 {
 
@@ -528,7 +529,7 @@ void övningsuppgift15()
         Console.WriteLine("Ditt ord är inte ett palindrom");
     }
 }// program där man läser av om ett ord är ett palindrom eller ej
- //void övningsuppgift17()
+void övningsuppgift17()
 {
 
     //Gör ett program som ber användaren mata in en text. 
@@ -546,12 +547,12 @@ void övningsuppgift15()
 
     for (int i = 0; i < inputtedString.Length; i++)
     {
-        
+
         if (inputtedString[i] == inputtedStringSequence[loopCount])
         {
             sequence += inputtedString[i];
             loopCount++;
-           // Console.WriteLine(loopCount);
+            // Console.WriteLine(loopCount);
 
             if (sequence == inputtedStringSequence)
             {
@@ -565,7 +566,7 @@ void övningsuppgift15()
 
 
     }
-    for (int i = inputtedString.Length -1; i >= 0; i--)
+    for (int i = inputtedString.Length - 1; i >= 0; i--)
     {
         for (int j = 0; i < inputtedString.Length; j++)
         {
@@ -574,63 +575,43 @@ void övningsuppgift15()
         }
     }
 } //Program där man ber användaren skriva in en text, sedan bara en bit av texten. programmet skall sedan returna hela strängen fast med delen som skrev sists i annan färg
-                            // Inte riktigt klar än, har fått ut sekvensen som skrivs andra gången i en ny variabel so far.
-=======
+  // Inte riktigt klar än, fokuserade på labben som var väldigt likt denna uppgift med färgläggning
 
+//void övningsuppgifter18()
 
-//Ett palindrom är ett ord som blir samma framlänges som baklänges. 
-//Be användaren skriva in ett ord och ange sedan om det är ett palindrom eller inte.
-// ----------------------------------------------------------------------------------
-//1. Convert the string into an array of characters using the ToCharArray() method.
-//2. Reverse the character array using Array.Reverse method.
-//3. Create a new string from the reversed array.This will result in
-//   reversing the original string.---
-//-----------------------------------------------------------------------------------
-//char[] inputtedStringArray = inputtedString.ToCharArray();
-//Array.Reverse(inputtedStringArray);
-//Console.WriteLine(inputtedStringArray);
-//if (inputtedString + "" == inputtedStringArray + "")
-//{
-//    Console.WriteLine("Ditt tal är ett palindrom!");
-//}
-//-----------------------------------------------------------------------------------
-//int reversed;
-//int.TryParse(inputtedString, out reversed);
-//-----------------------------------------------------------------------------------
+// Be användaren mata in en mening. Skriv ut det genomsnittliga antalet bokstäver i orden.
 
-// Lösning som jag inte förstår mig på
-
-//Console.WriteLine("Skriv ett ord");
-//string inputtedString = Console.ReadLine();
-//string reversedString = new string(inputtedString.ToCharArray().Reverse().ToArray()); //|| //hävdar att strängen ej är ett palindrom om ena variabeln har stora bokstäver medan den andra
-//                                                                                      // inte har det
-//if (inputtedString == reversedString)
-//{
-//    Console.WriteLine("Ditt ord är ett palindrom");
-//}
-//else
-//{
-//    Console.WriteLine("Ditt ord är inte ett palindrom");
-//}
-//------------------------------------------------------------------------------------
-
-
-Console.WriteLine("Skriv ett ord");
+Console.WriteLine("Var god skriv in en mening");
 string inputtedString = Console.ReadLine();
+char[] stringArray = new char[inputtedString.Length];
+double charCounter = 0;
+double averageChars = 0;
+double wordAmount = 0;
 
-for (int i = inputtedString.Length - 1; i >= 0; i--)
+
+
+
+
+for (int i = 0; i < stringArray.Length; i++)
 {
-
-    for (int j = 0; j < inputtedString.Length; j++)
+    if (char.IsLetter(inputtedString[i]))
     {
-        if (i != j)
-        {
-            Console.WriteLine("inte ett palindrom");
-        }
-        else
-        {
-            Console.WriteLine("palindrom");
-        }
+        charCounter++;
+
+
+
     }
+
 }
->>>>>>> Stashed changes
+
+
+wordAmount = inputtedString.Length - charCounter;
+wordAmount = wordAmount + 1;
+averageChars = charCounter / wordAmount;
+
+Console.WriteLine("du e efterbliven " + averageChars);
+
+
+
+
+
