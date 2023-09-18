@@ -1,4 +1,6 @@
-﻿void övningsuppgift1()
+﻿using System.Threading.Channels;
+
+void övningsuppgift1()
 {
     // Uppgift 1
 
@@ -466,7 +468,7 @@ void övningsuppgift14()
     string inputtedstring = Console.ReadLine();
     string[] vowels = new string[9] { "a", "o", "u", "å", "e", "i", "y", "ä", "ö" };
     int iteration = 0;
-     foreach (char letter in inputtedstring)
+    foreach (char letter in inputtedstring)
     {
         if (vowels.Contains(inputtedstring[iteration] + ""))
         {
@@ -527,7 +529,7 @@ void övningsuppgift15()
         Console.WriteLine("Ditt ord är inte ett palindrom");
     }
 }// program där man läser av om ett ord är ett palindrom eller ej
- //void övningsuppgift17()
+void övningsuppgift17()
 {
 
     //Gör ett program som ber användaren mata in en text. 
@@ -545,12 +547,12 @@ void övningsuppgift15()
 
     for (int i = 0; i < inputtedString.Length; i++)
     {
-        
+
         if (inputtedString[i] == inputtedStringSequence[loopCount])
         {
             sequence += inputtedString[i];
             loopCount++;
-           // Console.WriteLine(loopCount);
+            // Console.WriteLine(loopCount);
 
             if (sequence == inputtedStringSequence)
             {
@@ -564,7 +566,7 @@ void övningsuppgift15()
 
 
     }
-    for (int i = inputtedString.Length -1; i >= 0; i--)
+    for (int i = inputtedString.Length - 1; i >= 0; i--)
     {
         for (int j = 0; i < inputtedString.Length; j++)
         {
@@ -573,4 +575,43 @@ void övningsuppgift15()
         }
     }
 } //Program där man ber användaren skriva in en text, sedan bara en bit av texten. programmet skall sedan returna hela strängen fast med delen som skrev sists i annan färg
-                            // Inte riktigt klar än, har fått ut sekvensen som skrivs andra gången i en ny variabel so far.
+  // Inte riktigt klar än, fokuserade på labben som var väldigt likt denna uppgift med färgläggning
+
+//void övningsuppgifter18()
+
+// Be användaren mata in en mening. Skriv ut det genomsnittliga antalet bokstäver i orden.
+
+Console.WriteLine("Var god skriv in en mening");
+string inputtedString = Console.ReadLine();
+char[] stringArray = new char[inputtedString.Length];
+double charCounter = 0;
+double averageChars = 0;
+double wordAmount = 0;
+
+
+
+
+
+for (int i = 0; i < stringArray.Length; i++)
+{
+    if (char.IsLetter(inputtedString[i]))
+    {
+        charCounter++;
+
+
+
+    }
+
+}
+
+
+wordAmount = inputtedString.Length - charCounter;
+wordAmount = wordAmount + 1;
+averageChars = charCounter / wordAmount;
+
+Console.WriteLine("du e efterbliven " + averageChars);
+
+
+
+
+
