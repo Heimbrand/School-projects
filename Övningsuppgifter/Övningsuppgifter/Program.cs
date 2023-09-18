@@ -576,42 +576,63 @@ void övningsuppgift17()
     }
 } //Program där man ber användaren skriva in en text, sedan bara en bit av texten. programmet skall sedan returna hela strängen fast med delen som skrev sists i annan färg
   // Inte riktigt klar än, fokuserade på labben som var väldigt likt denna uppgift med färgläggning
-
-//void övningsuppgifter18()
-
-// Be användaren mata in en mening. Skriv ut det genomsnittliga antalet bokstäver i orden.
-
-Console.WriteLine("Var god skriv in en mening");
-string inputtedString = Console.ReadLine();
-char[] stringArray = new char[inputtedString.Length];
-double charCounter = 0;
-double averageChars = 0;
-double wordAmount = 0;
-
-
-
-
-
-for (int i = 0; i < stringArray.Length; i++)
+void övningsuppgifter18()
 {
-    if (char.IsLetter(inputtedString[i]))
+
+
+
+
+    // Be användaren mata in en mening. Skriv ut det genomsnittliga antalet bokstäver i orden.
+
+    Console.WriteLine("Var god skriv in en mening");
+    string inputtedString = Console.ReadLine();
+    char[] stringArray = new char[inputtedString.Length];
+    double charCounter = 0;
+    double averageChars = 0;
+    double wordAmount = 0;
+
+
+
+
+
+    for (int i = 0; i < stringArray.Length; i++)
     {
-        charCounter++;
+        if (char.IsLetter(inputtedString[i]))
+        {
+            charCounter++;
 
 
+
+        }
 
     }
 
+
+    wordAmount = inputtedString.Length - charCounter;
+    wordAmount = wordAmount + 1;
+    averageChars = charCounter / wordAmount;
+
+    Console.WriteLine("genomsnittliga värdet antalet bokstäver i dina ord är " + averageChars);
+
+} // räkna ut det genomsnittliga antalet bokstäver i orden. räkna ut det genom att ta antalet spaces som .Length räknar med, minus min ord counter.
+  // stringinput = räknar med spaces, min charCounter som adderar chars under villkoret att det är en IsLetter gör inte det. är det spaces med så är det meningar. 
+
+//void övningsuppgifter19()
+
+//Skriv en metod DrawBox(int width, int height) 
+//När man anropar metoden ska den tömma konsolen och skriva ut en rektangel där de yttre tecknen består av ‘#’ och de inre av ‘-’ Exempel:
+
+//      DrawBox(7, 4);
+//      #######
+//      #-----#
+//      #-----#
+//      #######
+
+
+void DrawBox()
+{
+    string brädstapel = "#";
+    string bindestreck = "-";
+
+
 }
-
-
-wordAmount = inputtedString.Length - charCounter;
-wordAmount = wordAmount + 1;
-averageChars = charCounter / wordAmount;
-
-Console.WriteLine("du e efterbliven " + averageChars);
-
-
-
-
-
