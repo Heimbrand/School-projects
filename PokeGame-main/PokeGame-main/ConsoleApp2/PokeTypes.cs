@@ -15,6 +15,9 @@ namespace PokeGame
         Water,
         Grass,
         Rock,
-        Psychic
+        Psychic,
+        normal,
+        ground,
+        flying
     }
 }

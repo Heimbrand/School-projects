@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PokeGame
+namespace PokeGame.SubClasses
 {
     internal class GrassPokemon : Pokemon
     {
         public GrassPokemon()
         {
-            Type = PokeTypes.Grass;        
+            Type = PokeTypes.Grass;
         }
         public void HyperBeam()
         {

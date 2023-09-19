@@ -1,4 +1,5 @@
 ﻿using PokeGame;
+using PokeGame.SubClasses;
 
 // Här instansieras klassen Pokemon och ett objekt av typen Pokemon läggs i variabeln pikachu
 // Detta görs med en konstruktor i klassen Pokemon som har 2 parametrar, name och type.

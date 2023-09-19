@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PokeGame
+namespace PokeGame.SubClasses
 {
     internal class PsychicPokemon : Pokemon
     {
-        public PsychicPokemon() 
+        public PsychicPokemon()
         {
             Type = PokeTypes.Psychic;
         }

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Channels;
 using System.Threading.Tasks;
 
-namespace PokeGame
+namespace PokeGame.SubClasses
 {
     internal class WaterPokemon : Pokemon
     {
@@ -18,6 +18,6 @@ namespace PokeGame
         {
             Console.WriteLine("Blublublub!");
         }
-        
+
     }
 }
