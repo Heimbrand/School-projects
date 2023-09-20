@@ -9,13 +9,13 @@ namespace ClassLibraryPokeGame.Pokemons
         private int _healthPoints = 100;
         public int HealthPoints
         {
-            // Get är en metod som anropas när värdet på en property ska läsas
+           
             get { return _healthPoints; }
-            // Set är en metod som anropas när värdet på en property ska sättas
+           
             set { _healthPoints = value; }
         }
 
-        // Property för Name
+      
         private string _name;
         public string Name
         {
@@ -37,15 +37,13 @@ namespace ClassLibraryPokeGame.Pokemons
             set { _type = value; }
         }
 
-        // Detta är en tom konstruktor, om ingen konstruktor deklareras så finns en sådan i alla klasser utan at tman behöver deklarera den.
-        // En konstruktor är en metod som returnerar en ny instans av den typ den befinner sig i, returtyp och namn slås ihop.
-        public Pokemon()
+        public Pokemon() //Konstruktor utan parametrar, den är identisk med en defaultkonstruktor
         {
-
+            
         }
 
-        // Detta är ytterligare en konstruktor, denna gång med parametrar. En klass kan ha 0 ... n konstruktorer, bara alla har olika signatur.
-        public Pokemon(string name, PokeTypes type)
+        // Detta är en konstruktor med parametrar. En klass kan ha hur många konstruktorer som man vill, bara alla har olika signatur.
+        public Pokemon(string name, PokeTypes type) 
         {
             _name = name;
             _type = type;
@@ -59,11 +57,6 @@ namespace ClassLibraryPokeGame.Pokemons
         }
 
         
-        public void Eat(string food)
-        {
-            Console.WriteLine("Nomnom");
-        }
-
 
     }
 }

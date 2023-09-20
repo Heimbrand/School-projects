@@ -1,26 +1,11 @@
 ﻿using ClassLibraryPokeGame;
 using ClassLibraryPokeGame.Pokemons;
 
-//Pokemon pikachu = new Pokemon("Pikachu", PokeTypes.Electric);
-//Pokemon charizard = new Pokemon();
-//charizard.Name = "Charizard";
-//charizard.Type = PokeTypes.Fire;
-
-//charizard.Attack(pikachu);
-//pikachu.Attack(charizard);
-
-//Console.WriteLine("Pikachu health points: " + pikachu.HealthPoints);
-//Console.WriteLine("Charmander health points: " + charizard.HealthPoints);
-
-//Console.WriteLine("______________________");
-
-
 
 Trainer olle = new Trainer();
 
-Console.WriteLine(olle.PokemonCollection.Count);
-
-
+Pokemon charizard = new Pokemon();
+Pokemon pikachu = new Pokemon();
 Pokemon charmeleon = new Pokemon();
 Pokemon wartortle = new Pokemon();
 Pokemon mew = new Pokemon();
@@ -30,12 +15,20 @@ mew.Name = "Mew";
 charmeleon.Name = "Charmeleon";
 venusaur.Name = "Venusaur";
 wartortle.Name = "Wartortle";
+pikachu.Name = "Pikachu";
 
 olle.Catch(charmeleon);
 olle.Catch(wartortle);
 olle.Catch(mew);
 olle.Catch(venusaur);
+olle.Catch(pikachu);
 
+Console.WriteLine("----------------------------");
 charmeleon.Attack(wartortle);
-charmeleon.Eat(string food);
-Console.WriteLine("---------------------------------");
+Console.WriteLine("Wartortle lost 10 HealthPoints. Current HP: " + wartortle.HealthPoints);
+Console.WriteLine("----------------------------");
+
+Console.WriteLine("Olle has catched: " + olle.PokemonCollection.Count + " Pokémon's so far!");
+Console.WriteLine("Olles Pokémon's are: " + olle.PokemonCollection[1]);
+
+

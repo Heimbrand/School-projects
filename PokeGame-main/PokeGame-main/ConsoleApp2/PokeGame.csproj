@@ -11,4 +11,8 @@
     <ProjectReference Include="..\ClassLibraryPokeGame\ClassLibraryPokeGame.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="SubClasses\" />
+  </ItemGroup>
+
 </Project>
