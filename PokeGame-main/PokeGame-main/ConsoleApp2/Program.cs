@@ -1,5 +1,5 @@
 ﻿using ClassLibraryPokeGame;
-using ClassLibraryPokeGame.SubClasses;
+using ClassLibraryPokeGame.Pokemons;
 
 //Pokemon pikachu = new Pokemon("Pikachu", PokeTypes.Electric);
 //Pokemon charizard = new Pokemon();
@@ -21,10 +21,10 @@ Trainer olle = new Trainer();
 Console.WriteLine(olle.PokemonCollection.Count);
 
 
-FirePokemon charmeleon = new FirePokemon();
-PsychicPokemon wartortle = new PsychicPokemon();
-WaterPokemon mew = new WaterPokemon();
-GrassPokemon venusaur = new GrassPokemon();
+Pokemon charmeleon = new Pokemon();
+Pokemon wartortle = new Pokemon();
+Pokemon mew = new Pokemon();
+Pokemon venusaur = new Pokemon();
 
 mew.Name = "Mew";
 charmeleon.Name = "Charmeleon";

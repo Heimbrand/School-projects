@@ -1,8 +1,8 @@
 ﻿using ClassLibraryPokeGame.Enums;
 
-namespace ClassLibraryPokeGame
+namespace ClassLibraryPokeGame.Pokemons
 {
-    public abstract class Pokemon
+    public class Pokemon
     {
         // Property för health points 
         // Databehållaren "bakom" en property kallas för fält.
@@ -58,7 +58,11 @@ namespace ClassLibraryPokeGame
             Console.WriteLine(Name + " Attacks " + target.Name);
         }
 
-        public abstract void Eat(string food);
+        
+        public void Eat(string food)
+        {
+            Console.WriteLine("Nomnom");
+        }
 
 
     }

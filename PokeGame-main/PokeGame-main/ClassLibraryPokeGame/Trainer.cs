@@ -1,4 +1,6 @@
-﻿namespace ClassLibraryPokeGame
+﻿using ClassLibraryPokeGame.Pokemons;
+
+namespace ClassLibraryPokeGame
 {
     public class Trainer
     {
