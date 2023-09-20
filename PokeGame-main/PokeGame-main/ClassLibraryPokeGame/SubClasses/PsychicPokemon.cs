@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ClassLibraryPokeGame.Enums;
 
-namespace PokeGame.SubClasses
+namespace ClassLibraryPokeGame.SubClasses
 {
-    internal class PsychicPokemon : Pokemon
+    public class PsychicPokemon : Pokemon
     {
         public PsychicPokemon()
         {
@@ -15,6 +16,11 @@ namespace PokeGame.SubClasses
         public void Confusion()
         {
             Console.WriteLine("All your base are belong to us");
+        }
+
+        public override void Eat(string food)
+        {
+            
         }
     }
 }

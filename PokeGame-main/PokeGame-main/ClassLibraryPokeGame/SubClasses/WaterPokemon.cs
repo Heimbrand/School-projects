@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Channels;
 using System.Threading.Tasks;
+using ClassLibraryPokeGame.Enums;
 
-namespace PokeGame.SubClasses
+namespace ClassLibraryPokeGame.SubClasses
 {
-    internal class WaterPokemon : Pokemon
+    public class WaterPokemon : Pokemon
     {
         public WaterPokemon()
         {
@@ -19,5 +20,9 @@ namespace PokeGame.SubClasses
             Console.WriteLine("Blublublub!");
         }
 
+        public override void Eat(string food)
+        {
+            
+        }
     }
 }
