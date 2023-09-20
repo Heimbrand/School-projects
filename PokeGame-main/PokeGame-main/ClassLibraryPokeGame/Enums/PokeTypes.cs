@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ClassLibraryPokeGame.Enums
+﻿namespace ClassLibraryPokeGame.Enums
 {
     // Detta är en Enum, enums kan användas för att deklarera värden med klartext.
     // Enums underlättar för oss när vi tex. ska kontrollera giltiga värden

@@ -7,6 +7,7 @@
         Ember,
         Bubble,
         Confusion,
-        Hyperbream
+        Hyperbream,
+        Thunderbolt
     }
 }

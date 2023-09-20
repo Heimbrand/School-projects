@@ -37,4 +37,5 @@ olle.Catch(mew);
 olle.Catch(venusaur);
 
 charmeleon.Attack(wartortle);
+charmeleon.Eat(string food);
 Console.WriteLine("---------------------------------");
