@@ -29,6 +29,6 @@ Console.WriteLine("Wartortle lost 10 HealthPoints. Current HP: " + wartortle.Hea
 Console.WriteLine("----------------------------");
 
 Console.WriteLine("Olle has catched: " + olle.PokemonCollection.Count + " Pokémon's so far!");
-Console.WriteLine("Olles Pokémon's are: " + olle.PokemonCollection[1]);
+
 
 
