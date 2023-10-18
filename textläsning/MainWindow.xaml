@@ -19,11 +19,11 @@
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.ColumnSpan="3">
             <Separator Width="10"></Separator>
-            <Button Click="SaveFileBtn_OnClick" Name="SaveFileBtn" Content="Spara" Height="35"/>
+            <Button  Click="SaveFileBtn_OnClick" Name="SaveFileBtn" Content="Save" Height="35" Width="35"/>
             <Separator Width="10"></Separator>
-            <Button Name="OpenFileBtn" Content="Öppna" Click="OpenFileBtn_OnClick" Height="35"/>
+            <Button Name="OpenFileBtn" Content="Open" Click="OpenFileBtn_OnClick" Height="35" Width="35"/>
             <Separator Width="10"></Separator>
-            <ToggleButton Content="B" Name="ToggleBoldBtn" Click="ToggleBoldBtn_OnClick"></ToggleButton>
+            <ToggleButton Width="35" Height="35" Content="B" Name="ToggleBoldBtn" Click="ToggleBoldBtn_OnClick" FontWeight="Bold"></ToggleButton>
         </StackPanel>
         <RichTextBox Name="MainTextBox" Grid.Column="1" Grid.Row="1"/>
 
