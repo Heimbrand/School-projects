@@ -1,0 +1,38 @@
+﻿<Window x:Class="MinFörstaApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MinFörstaApp"
+        mc:Ignorable="d"
+        Title="Olle" Height="500" Width="900" MinHeight="100" MinWidth="100" FontSize="36" FontFamily="Consolas">
+    <Grid Name="MittGrid"  Background="HotPink">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <Label Grid.Column="0" HorizontalAlignment="Center" FontFamily="Consolas" Background="HotPink">
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect> Titta Så fint de dansar
+        </Label>
+        <Label Grid.Column="1" Name= "HejText" HorizontalAlignment="Center" >
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect> Hej på dig!
+        </Label>
+        <TextBlock Grid.Column="2" HorizontalAlignment="Center" Name="counterButton"></TextBlock>
+
+        <Button Grid.Column="3" Background="HotPink" Click="Button_Click">Tryck här</Button>
+        <Button Grid.Column="4" Background="HotPink" Click="ellerHär">Eller här</Button>
+        <Button Grid.Column="5" Background="HotPink" Click="kirbyDance">Tryck här för en väldigt fin liten dans=)</Button>
+    </Grid>
+</Window>

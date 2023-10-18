@@ -636,3 +636,10 @@ void DrawBox()
 
 
 }
+
+
+IEnumerable<int> ints = new List<int> { 2, 2, 4, 6 };
+
+
+
+Console.WriteLine(ints.Sum(val => val * val ));
