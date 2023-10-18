@@ -37,9 +37,13 @@ namespace textläsning
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             if (saveFileDialog.ShowDialog() == true)
             {
-                var text = MainTextBox.Text;
-                using var sw = new StreamWriter(saveFileDialog.FileName);
-                sw.Write(text);
+                var stream = new FileStream(saveFileDialog.FileName, FileMode.Create);
+                var text = new TextRange(MainTextBox.Document.ContentStart, MainTextBox.Document.ContentEnd);
+                text.Save(stream, DataFormats.Text);
+
+                //var text = MainTextBox.Text;
+                //using var sw = new StreamWriter(saveFileDialog.FileName);
+                //sw.Write(text);
             }
 
         }

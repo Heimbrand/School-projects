@@ -25,7 +25,7 @@
             <Separator Width="10"></Separator>
             <ToggleButton Content="B" Name="ToggleBoldBtn" Click="ToggleBoldBtn_OnClick"></ToggleButton>
         </StackPanel>
-        <TextBox Name="MainTextBox" Grid.Column="1" Grid.Row="1"/>
+        <RichTextBox Name="MainTextBox" Grid.Column="1" Grid.Row="1"/>
 
     </Grid>
 
