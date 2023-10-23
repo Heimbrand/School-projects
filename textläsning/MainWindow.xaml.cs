@@ -54,7 +54,7 @@ namespace textläsning
             {
                 using var sr = new StreamReader(openFileDialog.FileName);
                 var text = sr.ReadToEnd();
-                MainTextBox.Text = text;
+               // MainTextBox.Text = text;
             }
 
 
