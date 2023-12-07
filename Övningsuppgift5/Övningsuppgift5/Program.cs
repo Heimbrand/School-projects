@@ -80,7 +80,18 @@ using var appDbContext = new AppDbContext();
 //    Console.WriteLine($"Authors: {Authors.Name}");
 //}
 
-//var removeduplicates = appDbContext.Author.Where(a => a.Id == 6);
+var removeAuthorId = appDbContext.Blogs.Where(a => a.ID == 1);
+
+
+foreach (var Authors in removeAuthorId)
+{
+    appDbContext.Blogs.Remove(Authors);
+}
+appDbContext.SaveChanges();
+
+
+
+//var removeduplicates = appDbContext.Author.Where(a => a.Id == 1);
 //foreach (var Authors in removeduplicates)
 //{
 //    appDbContext.Author.Remove(Authors);
@@ -109,9 +120,9 @@ using var appDbContext = new AppDbContext();
 //appDbContext.SaveChanges();
 
 
-var Kommenterare = appDbContext.Comment.FirstOrDefault(a => a.Comments == "Fyfan sicken go blogg");
-var commentedBlog = appDbContext.Blogs.FirstOrDefault(b => b.Title == "Pelles dag");
+//var Kommenterare = appDbContext.Comment.FirstOrDefault(a => a.Comments == "Fyfan sicken go blogg");
+//var commentedBlog = appDbContext.Blogs.FirstOrDefault(b => b.Title == "Pelles dag");
 
 
-commentedBlog.Comments.Add(Kommenterare);
-appDbContext.SaveChanges();
+//commentedBlog.Comments.Add(Kommenterare);
+//appDbContext.SaveChanges();
