@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34322.80
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Övning5_6", "Övning5_6\Övning5_6.csproj", "{BED6B9A5-A0B5-479B-BE65-920583B4AC30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{1A7AED7A-C751-49C2-98C2-AAA5A8695FBC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BED6B9A5-A0B5-479B-BE65-920583B4AC30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BED6B9A5-A0B5-479B-BE65-920583B4AC30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BED6B9A5-A0B5-479B-BE65-920583B4AC30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BED6B9A5-A0B5-479B-BE65-920583B4AC30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A7AED7A-C751-49C2-98C2-AAA5A8695FBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A7AED7A-C751-49C2-98C2-AAA5A8695FBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A7AED7A-C751-49C2-98C2-AAA5A8695FBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A7AED7A-C751-49C2-98C2-AAA5A8695FBC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E89B3BC5-AB24-4683-A6F4-52D7F04FDC78}
+	EndGlobalSection
+EndGlobal
